@@ -1,0 +1,38 @@
+body{
+	background-color: red;
+	animation:myfirst 10s linear infinite;
+	-moz-animation:myfirst 10s linear infinite; /* Firefox */
+	-webkit-animation:myfirst 10s linear infinite; /* Safari and Chrome */
+	-o-animation:myfirst 10s linear infinite; /* Opera */
+}
+@keyframes myfirst
+{
+0%,100%   {background:red;}
+25%  {background:black;}
+50%  {background:blue;}
+75% {background:green;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0%,100%   {background:red;}
+25%  {background:black;}
+50%  {background:blue;}
+75% {background:green;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%,100%   {background:red;}
+25%  {background:black;}
+50%  {background:blue;}
+75% {background:green;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0%,100%   {background:red;}
+25%  {background:black;}
+50%  {background:blue;}
+75% {background:green;}
+}

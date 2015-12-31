@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.naveen.videoplayer.PlayVideo"
+    android:orientation="vertical"
+    android:weightSum="1">
+<com.google.android.youtube.player.YouTubePlayerView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:id="@+id/youtube_player">
+</com.google.android.youtube.player.YouTubePlayerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:focusableInTouchMode="false"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Configure GIF"
+            android:padding="10dp"
+            android:id="@+id/textView2"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:textAlignment="center"
+            android:background="@color/accent_material_dark" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            android:padding="5dp"
+            android:id="@+id/editText"
+            android:layout_gravity="center_horizontal"
+            android:hint="Enter time"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:textColorHint="#faf3f3"
+            android:textSize="17dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:padding="5dp"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_gravity="center_horizontal"
+            android:hint="Enter duration"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:textColorHint="#faf3f3"
+            android:textSize="17dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:padding="5dp"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:layout_gravity="center_horizontal"
+            android:hint="fps recommended(10)"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:textColorHint="#faf3f3"
+            android:textSize="17dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:padding="5dp"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:layout_gravity="center_horizontal"
+            android:hint="Enter File Name For GIF"
+            android:background="@color/colorPrimary"
+            android:textColor="#ffffff"
+            android:textColorHint="#faf3f3"
+            android:textSize="17dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET GIF"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:drawable/dialog_holo_light_frame" />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:indeterminate="true"/>
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:fitsSystemWindows="true"
+        tools:context="com.example.naveen.videoplayer.Main22Activity">
+        android:layout_height="match_parent">
+        <android.support.design.widget.FloatingActionButton android:id="@+id/fab2"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/home"/>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
+</LinearLayout>
+

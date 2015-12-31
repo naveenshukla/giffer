@@ -1,0 +1,62 @@
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="5dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/webView"
+        android:src="@drawable/downloaded"
+        android:layout_margin="5dp"
+        android:id="@+id/imageView2" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GIF has been downloaded to sd card 'MyApp' directory"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="19dp"
+        android:layout_margin="4dp"
+        android:id="@+id/textView"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_below="@+id/webView"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignEnd="@+id/imageView2"
+        android:textColor="#b1000000" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Got It"
+        android:id="@+id/button3"
+        android:onClick="gotIt"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:background="@color/button_material_dark"
+        android:padding="10dp" />
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:fitsSystemWindows="true"
+        tools:context="com.example.naveen.videoplayer.Main22Activity">
+        <android.support.design.widget.FloatingActionButton android:id="@+id/fab3"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end" android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/home"/>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
