@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -30,7 +31,7 @@ import java.net.URLConnection;
 public class DownloadFileFromURL extends AsyncTask<String , String, String>  {
     public final static String EXTRA_MESSAGE = "com.example.naveen.videoplayer.MESSAGE";
     private Context context;
-    private  String filename1;
+    private  String filename1,filename;
     private  ProgressBar progressBar;
     public DownloadFileFromURL(Context context,ProgressBar progressBar){
         this.context = context;
@@ -65,7 +66,7 @@ public class DownloadFileFromURL extends AsyncTask<String , String, String>  {
             InputStream input = new BufferedInputStream(url.openStream(), 8192);
 
             // Output stream to write file
-            String filename = "/sdcard/MyApp/" + filename1 + ".gif";
+            filename = "/sdcard/MyApp/" + filename1 + ".gif";
             Log.d("appcreate",filename);
             OutputStream output = new FileOutputStream(filename);
             byte data[] = new byte[2048];
@@ -94,6 +95,8 @@ public class DownloadFileFromURL extends AsyncTask<String , String, String>  {
         return null;
     }
     protected void onPostExecute(String file_url) {
+        long length = filename.length();
+        Log.d("appcreate", String.valueOf(length));
         progressBar.setVisibility(View.GONE);
         Toast.makeText(context, "File Downloaded ...", Toast.LENGTH_LONG).show();
         String message = filename1;
@@ -105,4 +108,3 @@ public class DownloadFileFromURL extends AsyncTask<String , String, String>  {
 
     }
 }
-

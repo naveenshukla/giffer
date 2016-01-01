@@ -25,7 +25,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GIF has been downloaded to sd card 'MyApp' directory"
+        android:text="GIF has been downloaded to 'MyApp' directory"
         android:textAlignment="center"
         android:padding="10dp"
         android:textSize="19dp"

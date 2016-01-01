@@ -22,6 +22,5 @@ public class Menu extends AppCompatActivity {
     }
     public void exit(View v){
         finish();
-        System.exit(0);
     }
 }

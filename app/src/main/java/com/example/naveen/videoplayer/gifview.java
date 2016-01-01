@@ -1,6 +1,7 @@
 package com.example.naveen.videoplayer;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
@@ -24,7 +25,6 @@ public class gifview extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent1 = new Intent(gifview.this, Menu.class);
                 startActivity(intent1);
-
             }
         });
         Intent intent = getIntent();
@@ -38,9 +38,11 @@ public class gifview extends AppCompatActivity {
         Log.d("appcreate", imagePath);
         String html = "<html><head></head><body style=\"text-align:center\"><img src=\"" + imagePath + "\"/></body></html>";
         mWebView.loadDataWithBaseURL("", html, "text/html","utf-8", "");
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        String name = pref.getString("Name",null);
     }
     public void gotIt(View v){
-        Intent intent = new Intent(this,MainActivity.class);
+        Intent intent = new Intent(gifview.this ,MainActivity.class);
         startActivity(intent);
     }
 }
